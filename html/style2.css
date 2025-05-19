@@ -1,0 +1,85 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Oswald", sans-serif;
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+header{
+    width: 100%;
+    background-color: #424147;
+}
+
+.top-header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top-header {
+    background-color: #fff;
+    padding: 20px 4%;
+}
+
+.top-header .logotipo img{
+    max-width: 200px;
+}
+
+.top-header .foder-social button{
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid #424147;
+    cursor: pointer;
+}
+
+.bottom-header nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.bottom-header nav ul li a{
+    color: #fff;
+    padding: 20px 40px;
+    text-decoration: none;
+    font-weight: 600px;
+    display: block;
+    transition: .3s;
+}
+
+.bottom-header nav ul li a:hover{
+    background-color: #ed6886;
+    color: #424147;
+    box-shadow: inset 0 0 8px #0000008a;
+}
+
+.drop-hover{
+    position: relative;
+}
+
+.drop-hover .drop {
+    position: absolute;
+    background-color: #5f5e64;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.drop-hover .drop a{
+    padding: 20px;
+}
+
+.drop-hover:hover .drop{
+    height: 320px;
+}
