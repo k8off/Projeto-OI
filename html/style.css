@@ -14,6 +14,7 @@
     --code-text: #f8f8f2; /* Texto dos blocos de código */
     --border-color: #ddd; /* Cor da borda padrão */
     --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra padrão */
+    --border-radius: 8px; /* Adicionado para bordas arredondadas */
 }
 
 /* Variáveis para TEMA ESCURO */
@@ -24,7 +25,7 @@ body.dark-theme {
     --text-color: #ecf0f1; /* Cor do texto claro para o corpo */
     --light-bg: #282a36; /* Fundo de seções escuras (Dracula-like) */
     --white: #44475a; /* Fundo de seções 'brancas' no tema escuro */
-    --header-text-color: #ecf0f1; /* Cor do texto do header no tema escuro (um cinza bem claro) */
+    --header-text-color: #b3bacc; /* Cor do texto do header no tema escuro */
     --code-bg: #1e1e1e; /* Fundo dos blocos de código mais escuro */
     --code-text: #f8f8f2; /* Texto dos blocos de código (mantido claro) */
     --border-color: #383838; /* Borda escura */
@@ -60,7 +61,7 @@ body {
 /* Cabeçalho */
 header {
     background-color: var(--secondary-color);
-    color: var(--header-text-color); /* Usando a nova variável aqui */
+    color: var(--header-text-color);
     padding: 15px 0;
     box-shadow: var(--box-shadow);
     z-index: 1000;
@@ -81,7 +82,7 @@ header h1 {
     font-size: 2.5em;
     text-align: center;
     margin-bottom: 10px;
-    color: var(--header-text-color); /* E também para o H1 */
+    color: var(--header-text-color);
 }
 
 header nav {
@@ -97,7 +98,7 @@ header nav ul {
 }
 
 header nav ul li a {
-    color: var(--header-text-color); /* E para os links de navegação */
+    color: var(--header-text-color);
     text-decoration: none;
     font-weight: 700;
     font-size: 1.1em;
@@ -110,7 +111,7 @@ header nav ul li a {
 header nav ul li a:hover,
 header nav ul li a.active {
     background-color: var(--primary-color);
-    color: var(--white); /* White aqui é sempre branco para o texto do hover */
+    color: #ffffff; /* Branco puro para o texto do hover */
 }
 
 /* Dropdown para Linguagens */
@@ -127,7 +128,7 @@ header nav ul li a.active {
 }
 
 .dropdown .dropbtn .arrow-down {
-    border: solid var(--header-text-color); /* A cor da seta também usa a nova variável */
+    border: solid var(--header-text-color);
     border-width: 0 2px 2px 0;
     margin-left: 5px;
     display: inline-block;
@@ -141,7 +142,11 @@ header nav ul li a.active {
 }
 
 .dropdown-content {
-    display: none;
+    /* MUDANÇAS AQUI PARA TRANSIÇÃO */
+    opacity: 0; /* Começa invisível */
+    visibility: hidden; /* Garante que não é clicável/selecionável quando invisível */
+    transition: opacity 0.3s ease-out, visibility 0.3s ease-out; /* Transição de 0.3s */
+
     position: absolute;
     background-color: var(--secondary-color);
     min-width: 300px;
@@ -150,11 +155,18 @@ header nav ul li a.active {
     border-radius: var(--border-radius);
     top: calc(100% + 5px);
     left: 0;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    /* transition: background-color 0.3s ease, box-shadow 0.3s ease; */ /* Remova ou comente esta linha */
 }
 
+/* Quando o mouse está sobre o dropdown (ou seu botão) */
+.dropdown:hover .dropdown-content {
+    opacity: 1; /* Torna visível */
+    visibility: visible; /* Torna clicável */
+}
+
+
 .dropdown-content a {
-    color: var(--header-text-color); /* E para os links do dropdown */
+    color: var(--header-text-color);
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -167,18 +179,14 @@ header nav ul li a.active {
 
 .dropdown-content a:hover {
     background-color: var(--primary-color);
-    color: var(--white);
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
+    color: #ffffff; /* Branco puro para o texto do hover no dropdown */
 }
 
 /* Botão de alternar tema (posição e estilo base) */
 .theme-toggle-button {
     background: none;
     border: none;
-    color: var(--header-text-color); /* E para o ícone de sol/lua */
+    color: var(--header-text-color);
     font-size: 1.8em;
     cursor: pointer;
     position: absolute;
@@ -353,6 +361,17 @@ body.dark-theme .hero::before {
     margin-right: auto;
 }
 
+/* Estilo para a legenda da imagem, se você a adicionou */
+.image-caption {
+    text-align: center;
+    font-size: 1em; /* Ajuste o tamanho conforme desejar */
+    color: var(--text-color); /* Adapta-se ao tema geral de texto */
+    margin-top: 10px; /* Espaçamento da imagem */
+    margin-bottom: 20px; /* Espaçamento para o h3 da linguagem */
+    font-style: italic;
+}
+
+
 .language-block h3 {
     font-family: 'Montserrat', sans-serif;
     font-size: 2.5em;
@@ -478,7 +497,7 @@ pre code {
 /* Rodapé */
 footer {
     background-color: var(--secondary-color);
-    color: var(--text-color);
+    color: var(--white); /* Rodapé agora usa a cor branca para o texto */
     text-align: center;
     padding: 20px 0;
     margin-top: 30px;
@@ -489,7 +508,6 @@ footer {
 footer p {
     margin: 0;
     font-size: 0.9em;
-    color: white;
 }
 
 /* Responsividade */
@@ -518,7 +536,10 @@ footer p {
     }
 
     .dropdown-content {
-        position: static;
+        /* MUDANÇAS AQUI PARA MOBILE */
+        opacity: 1; /* Sempre visível em mobile para dropdown aberto por clique */
+        visibility: visible;
+        position: static; /* Volta para fluxo normal */
         width: 100%;
         transform: translateX(0);
         box-shadow: none;
@@ -527,10 +548,11 @@ footer p {
         max-height: none;
         overflow-y: visible;
         z-index: auto;
+        transition: none; /* Remove transição para mobile onde display pode ser usado */
     }
 
     .dropdown-content a {
-        color: var(--header-text-color); /* Garante que links do dropdown se adaptam em mobile */
+        color: var(--header-text-color);
     }
 
     /* Ajuste do botão de tema em telas menores */
