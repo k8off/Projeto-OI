@@ -1,55 +1,351 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-        <link rel="stylesheet" href="style2.css">
-        <link rel="stylesheet" href="index.css">
-        <title>Document</title>
-    </head>
-    <body>
-        <header>
-            
-            <section class="top-header">
-                <div class="interface">
-                    <div class="logotipo">
-                        <a href="#">
-                            <img src="/imagens/logo-ifsc.png" alt="logotipo">
-                        </a>
-                    </div>
-                     <div class="foder-social">
-                        <a href=""><button><i class="bi bi-instagram"></i></button></a>
-                        <a href=""><button><i class="bi bi-whatsapp"></i></button></a>
-                        <a href=""><button><i class="bi bi-facebook"></i></button></a>
-                        
-                    </div>
-                </div>
-            </section>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desvendando Linguagens de Programação</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Linguagens de Programação</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#sobre-nos">Sobre Nós</a></li>
+                    <li class="dropdown">
+                        <a href="#linguagens" class="dropbtn">Linguagens <span class="arrow-down"></span></a>
+                        <div class="dropdown-content">
+                            <a href="#linguagem-c-familia">C, C++, C#, Objective-C</a>
+                            <a href="#linguagem-python">Python</a>
+                            <a href="#linguagem-html">HTML</a>
+                            <a href="#linguagem-css">CSS</a>
+                            <a href="#linguagem-javascript">JavaScript</a>
+                            <a href="#linguagem-typescript">TypeScript</a>
+                            <a href="#linguagem-brainfuck">Brainfuck</a>
+                            <a href="#linguagem-sql">SQL</a>
+                            <a href="#linguagem-php">PHP</a>
+                            <a href="#linguagem-rust">Rust</a>
+                            <a href="#linguagem-r">R</a>
+                        </div>
+                    </li>
+                    <li><a href="#engine-jogos">Engine e Linguagens em Jogos</a></li>
+                    <li><a href="#bugs">Bugs das Linguagens</a></li>
+                </ul>
+            </nav>
+            <button id="theme-toggle" class="theme-toggle-button">
+                <i class="fas fa-sun" id="sun-icon"></i> <i class="fas fa-moon" id="moon-icon"></i> </button>
+        </div>
+    </header>
 
-            <section class="bottom-header">
-                <div class="interface">
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <h2>Explore o Mundo da Programação</h2>
+                <p>Descubra as principais linguagens, suas aplicações e o impacto no desenvolvimento de software.</p>
+            </div>
+        </section>
 
-                    <nav class="menu">
-                        <ul>
-                            <li><a href="#">HOME</a></li>
-                            <li><a href="#">SOBRE NÓS</a></li>
-                            <li class="drop-hover"><a href="#">LINGUAGENS <i class="bi bi-caret-down-fill"></i></a>
-                                <div class="drop">
-                                    <a href="#">HTML</a>
-                                    <a href="#">CSS</a>
-                                    <a href="#">PYTHON</a>
-                                    <a href="#">JAVASCRIPT</a>
-                                    <a href="#">JAVA</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </nav>
+        <section id="sobre-nos" class="about-us content-section">
+            <div class="container">
+                <h2>Sobre Nós</h2>
+                <p>Bem-vindo ao nosso espaço dedicado ao fascinante universo das linguagens de programação. Nossa missão é descomplicar conceitos, apresentar as ferramentas essenciais e inspirar você a criar e inovar através do código. Acreditamos que a programação é uma arte e uma ciência que impulsiona o futuro.</p>
+                <p>Navegue pelas diferentes seções para aprofundar seus conhecimentos e descobrir a linguagem ideal para seus projetos. Seja bem-vindo ao nosso mundo do código!</p>
+            </div>
+        </section>
 
-                </div>
-            </section>
-           
-        </header>
+        <section id="linguagens" class="languages-overview content-section">
+            <div class="container">
+                <h2>As Linguagens que Movem o Mundo Digital</h2>
 
-    </body>
+                <article id="linguagem-c-familia" class="language-block">
+                    <img src="images/c_logo.png" alt="Logo da Família C">
+                    <h3>A Família C: C, C++, C#, Objective-C</h3>
+                    <p>A linguagem C é uma das bases da computação moderna, influenciando inúmeras outras linguagens. Conhecida por sua eficiência e controle de baixo nível, é amplamente usada em sistemas operacionais e software embarcado.</p>
+                    <h4>C</h4>
+                    <p><strong>Características:</strong> Linguagem procedural, compilada, oferece acesso direto à memória através de ponteiros, alta performance.</p>
+                    <p><strong>Aplicações Comuns:</strong> Sistemas operacionais (Unix, Linux, Windows kernel), firmware, sistemas embarcados, desenvolvimento de drivers.</p>
+                    <p><strong>Exemplo de Código (Olá, Mundo em C):</strong></p>
+                    <pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int main() {
+    printf("Olá, Mundo!\n");
+    return 0;
+}
+</code></pre>
+
+                    <h4>C++</h4>
+                    <p><strong>Características:</strong> Extensão do C com recursos de programação orientada a objetos (POO), genéricos, exceções, alto desempenho para sistemas complexos.</p>
+                    <p><strong>Aplicações Comuns:</strong> Desenvolvimento de jogos (engines como Unreal), software de sistemas, navegadores web, aplicações financeiras de alta frequência.</p>
+                    <p><strong>Exemplo de Código (Olá, Mundo em C++):</strong></p>
+                    <pre><code class="language-cpp">#include &lt;iostream&gt;
+
+int main() {
+    std::cout << "Olá, Mundo!" << std::endl;
+    return 0;
+}
+</code></pre>
+
+                    <h4>C#</h4>
+                    <p><strong>Características:</strong> Linguagem moderna orientada a objetos, desenvolvida pela Microsoft para a plataforma .NET, tipagem forte, coleta de lixo automática, integração com ecossistema Microsoft.</p>
+                    <p><strong>Aplicações Comuns:</strong> Desenvolvimento de aplicações Windows, desenvolvimento web (ASP.NET), desenvolvimento de jogos (Unity), aplicações mobile (Xamarin).</p>
+                    <p><strong>Exemplo de Código (Olá, Mundo em C#):</strong></p>
+                    <pre><code class="language-csharp">using System;
+
+public class Program {
+    public static void Main(string[] args) {
+        Console.WriteLine("Olá, Mundo!");
+    }
+}
+</code></pre>
+
+                    <h4>Objective-C</h4>
+                    <p><strong>Características:</strong> Extensão do C que adiciona recursos de Smalltalk (programação orientada a objetos baseada em mensagens), usado historicamente para desenvolvimento Apple.</p>
+                    <p><strong>Aplicações Comuns:</strong> Desenvolvimento de aplicativos para macOS e iOS (legado, substituído em grande parte por Swift).</p>
+                    <p><strong>Exemplo de Código (Olá, Mundo em Objective-C):</strong></p>
+                    <pre><code class="language-objectivec">#import &lt;Foundation/Foundation.h&gt;
+
+int main(int argc, const char * argv[]) {
+    @autoreleasepool {
+        NSLog(@"Olá, Mundo!");
+    }
+    return 0;
+}
+</code></pre>
+                </article>
+
+                <article id="linguagem-python" class="language-block">
+                    <img src="images/python_logo.png" alt="Logo Python">
+                    <h3>Python</h3>
+                    <p>Python é uma linguagem de programação de alto nível, interpretada, com uma sintaxe clara e legível, o que facilita o aprendizado e a produtividade. Sua vasta biblioteca padrão e o grande número de bibliotecas de terceiros a tornam adequada para diversas tarefas.</p>
+                    <p><strong>Características:</strong> Interpretada, tipagem dinâmica, multiparadigma (orientada a objetos, procedural, funcional), grande comunidade e suporte.</p>
+                    <p><strong>Aplicações Comuns:</strong> Desenvolvimento web (Django, Flask), ciência de dados (Pandas, NumPy, Scikit-learn), inteligência artificial e machine learning (TensorFlow, PyTorch), automação de tarefas, scripting.</p>
+                    <p><strong>Exemplo de Código (Olá, Mundo em Python):</strong></p>
+                    <pre><code class="language-python">print("Olá, Mundo!")
+</code></pre>
+                    <p><strong>Exemplo de Código (Leitura de entrada e saudação):</strong></p>
+                    <pre><code class="language-python">nome = input("Digite seu nome: ")
+print(f"Olá, {nome}!")
+</code></pre>
+                </article>
+
+                <article id="linguagem-html" class="language-block">
+                    <img src="images/html_logo.png" alt="Logo HTML">
+                    <h3>HTML (HyperText Markup Language)</h3>
+                    <p>HTML não é uma linguagem de programação, mas sim a linguagem de marcação padrão para criar páginas web. Ela define a estrutura e o conteúdo dos documentos web.</p>
+                    <p><strong>Características:</strong> Linguagem de marcação baseada em tags, estrutura hierárquica, utilizada para criar a semântica do conteúdo web.</p>
+                    <p><strong>Aplicações Comuns:</strong> Criação da estrutura de todas as páginas web, base para aplicações web e interfaces de usuário.</p>
+                    <p><strong>Exemplo de Código (Estrutura básica de um documento HTML):</strong></p>
+                    <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-BR"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Minha Página&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Título Principal&lt;/h1&gt;
+    &lt;p&gt;Este é um parágrafo de texto.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+                </article>
+
+                <article id="linguagem-css" class="language-block">
+                    <img src="images/css_logo.png" alt="Logo CSS">
+                    <h3>CSS (Cascading Style Sheets)</h3>
+                    <p>CSS é uma linguagem de folhas de estilo usada para descrever a apresentação de um documento HTML (ou XML). Ela controla o layout, cores, fontes e outros aspectos visuais das páginas web.</p>
+                    <p><strong>Características:</strong> Linguagem de estilo baseada em seletores e regras, permite separar a apresentação da estrutura do conteúdo.</p>
+                    <p><strong>Aplicações Comuns:</strong> Estilização de páginas web, criação de layouts responsivos, animações e efeitos visuais.</p>
+                    <p><strong>Exemplo de Código (Estilizando um título e um parágrafo):</strong></p>
+                    <pre><code class="language-css">h1 {
+    color: blue;
+    text-align: center;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+</code></pre>
+                </article>
+
+                <article id="linguagem-javascript" class="language-block">
+                    <img src="images/javascript_logo.png" alt="Logo JavaScript">
+                    <h3>JavaScript</h3>
+                    <p>JavaScript é uma linguagem de programação de alto nível, interpretada, essencial para adicionar interatividade e dinamismo a páginas web. Com Node.js, também é utilizada no desenvolvimento backend.</p>
+                    <p><strong>Características:</strong> Interpretada, tipagem dinâmica, orientada a objetos (prototipal), baseada em eventos, roda no navegador (client-side) e no servidor (server-side com Node.js).</p>
+                    <p><strong>Aplicações Comuns:</strong> Interatividade em websites, desenvolvimento de front-end (React, Angular, Vue.js), desenvolvimento de back-end (Node.js), desenvolvimento mobile (React Native).</p>
+                    <p><strong>Exemplo de Código (Olá, Mundo no console do navegador):</strong></p>
+                    <pre><code class="language-javascript">console.log("Olá, Mundo!");
+</code></pre>
+                    <p><strong>Exemplo de Código (Manipulando o DOM):</strong></p>
+                    <pre><code class="language-javascript">document.addEventListener('DOMContentLoaded', function() {
+    let heading = document.createElement('h2');
+    heading.textContent = 'Título Gerado por JavaScript';
+    document.body.appendChild(heading);
+});
+</code></pre>
+                </article>
+
+                <article id="linguagem-typescript" class="language-block">
+                    <img src="images/typescript_logo.png" alt="Logo TypeScript">
+                    <h3>TypeScript</h3>
+                    <p>TypeScript é um superset de JavaScript que adiciona tipagem estática opcional. Ele é transpilado para JavaScript e ajuda a escrever código mais robusto e fácil de manter, especialmente em projetos grandes.</p>
+                    <p><strong>Características:</strong> Superset de JavaScript, tipagem estática opcional, suporte a interfaces e classes, melhora a escalabilidade e a detecção de erros em tempo de desenvolvimento.</p>
+                    <p><strong>Aplicações Comuns:</strong> Desenvolvimento de front-end (React, Angular, Vue.js), desenvolvimento de back-end (Node.js), aplicações web complexas.</p>
+                    <p><strong>Exemplo de Código (Olá, Mundo em TypeScript com tipagem):</strong></p>
+                    <pre><code class="language-typescript">function greet(name: string): string {
+    return `Olá, ${name}!`;
+}
+
+let user = "Usuário TypeScript";
+console.log(greet(user));
+</code></pre>
+                </article>
+
+                <article id="linguagem-brainfuck" class="language-block">
+                    <img src="images/brainfuck_logo.png" alt="Logo Brainfuck">
+                    <h3>Brainfuck</h3>
+                    <p>Brainfuck é uma linguagem de programação esotérica minimalista, notável por seu pequeno número de comandos (apenas oito). É primariamente usada para desafiar programadores e explorar os limites da computação.</p>
+                    <p><strong>Características:</strong> Oito comandos simples (+, -, >, <, ., [, ]), opera em uma fita infinita de células de memória.</p>
+                    <p><strong>Aplicações Comuns:</strong> Principalmente para fins educacionais e de entretenimento na ciência da computação, não é usada para desenvolvimento prático.</p>
+                    <p><strong>Exemplo de Código (Olá, Mundo em Brainfuck - pode ser longo e difícil de entender):</strong></p>
+                    <pre><code class="language-brainfuck">++++++++++[&gt;+++++++&gt;++++++++++&gt;+++&gt;&lt;&lt;&lt;-]&gt;++.&gt;+.+++++++..+++.&gt;++.&lt;&lt;+++++++++++++++.&gt;.+++.------.--------.&gt;+.&gt;++.
+</code></pre>
+                </article>
+
+                <article id="linguagem-sql" class="language-block">
+                    <img src="images/sql_logo.png" alt="Logo SQL">
+                    <h3>SQL (Structured Query Language)</h3>
+                    <p>SQL é uma linguagem padrão para gerenciar e manipular bancos de dados relacionais. Ela permite consultar, inserir, atualizar e excluir dados.</p>
+                    <p><strong>Características:</strong> Linguagem de consulta declarativa, focada em operações com conjuntos de dados (tabelas).</p>
+                    <p><strong>Aplicações Comuns:</strong> Interação com sistemas de gerenciamento de bancos de dados (MySQL, PostgreSQL, SQL Server, etc.) em diversas aplicações.</p>
+                    <p><strong>Exemplo de Código (Selecionando todos os dados de uma tabela chamada 'clientes'):</strong></p>
+                    <pre><code class="language-sql">SELECT * FROM clientes;
+</code></pre>
+                    <p><strong>Exemplo de Código (Selecionando nomes de clientes com idade superior a 30):</strong></p>
+                    <pre><code class="language-sql">SELECT nome FROM clientes WHERE idade &gt; 30;
+</code></pre>
+                </article>
+
+                <article id="linguagem-php" class="language-block">
+                    <img src="images/php_logo.png" alt="Logo PHP">
+                    <h3>PHP (Hypertext Preprocessor)</h3>
+                    <p>PHP é uma linguagem de script de código aberto muito utilizada para desenvolvimento web server-side. Ela pode ser incorporada diretamente no HTML.</p>
+                    <p><strong>Características:</strong> Interpretada, tipagem dinâmica, focada em desenvolvimento web, grande ecossistema de frameworks (Laravel, Symfony).</p>
+                    <p><strong>Aplicações Comuns:</strong> Desenvolvimento de sites dinâmicos, aplicações web, sistemas de gerenciamento de conteúdo (WordPress, Drupal), e-commerce.</p>
+                    <p><strong>Exemplo de Código (Olá, Mundo em PHP):</strong></p>
+                    <pre><code class="language-php">&lt;?php
+echo "Olá, Mundo!";
+?&gt;
+</code></pre>
+                    <p><strong>Exemplo de Código (Exibindo informações do servidor):</strong></p>
+                    <pre><code class="language-php">&lt;?php
+phpinfo();
+?&gt;
+</code></pre>
+                </article>
+
+                <article id="linguagem-rust" class="language-block">
+                    <img src="images/rust_logo.png" alt="Logo Rust">
+                    <h3>Rust</h3>
+                    <p>Rust é uma linguagem de programação de sistemas que se concentra em segurança, velocidade e concorrência. Ela alcança segurança de memória sem garbage collection através de um sistema de propriedade único.</p>
+                    <p><strong>Características:</strong> Compilada, forte ênfase em segurança de memória e concorrência, performance comparável a C++, sintaxe moderna.</p>
+                    <p><strong>Aplicações Comuns:</strong> Desenvolvimento de sistemas operacionais, engines de jogos, ferramentas de linha de comando, aplicações web de alta performance.</p>
+                    <p><strong>Exemplo de Código (Olá, Mundo em Rust):</strong></p>
+                    <pre><code class="language-rust">fn main() {
+    println!("Olá, Mundo!");
+}
+</code></pre>
+                    <p><strong>Exemplo de Código (Função simples com declaração de tipo):</strong></p>
+                    <pre><code class="language-rust">fn adicionar(x: i32, y: i32) -> i32 {
+    x + y
+}
+
+fn main() {
+    let resultado = adicionar(5, 3);
+    println!("O resultado é: {}", resultado);
+}
+</code></pre>
+                </article>
+
+                <article id="linguagem-r" class="language-block">
+                    <img src="images/r_logo.png" alt="Logo R">
+                    <h3>R</h3>
+                    <p>R é uma linguagem de programação e um ambiente de software para computação estatística e gráficos. É amplamente utilizada por estatísticos e cientistas de dados.</p>
+                    <p><strong>Características:</strong> Focada em análise estatística e visualização de dados, grande número de pacotes especializados (CRAN), interpretada.</p>
+                    <p><strong>Aplicações Comuns:</strong> Análise de dados, modelagem estatística, machine learning, visualização de dados, bioinformática.</p>
+                    <p><strong>Exemplo de Código (Olá, Mundo em R):</strong></p>
+                    <pre><code class="language-r">print("Olá, Mundo!")
+</code></pre>
+                    <p><strong>Exemplo de Código (Criação de um vetor e cálculo da média):</strong></p>
+                    <pre><code class="language-r">dados <- c(10, 20, 30, 40, 50)
+media_dados <- mean(dados)
+print(paste("A média dos dados é:", media_dados))
+</code></pre>
+                </article>
+            </div>
+        </section>
+
+        <section id="engine-jogos" class="engine-games content-section">
+            <div class="container">
+                <h2>Engine e Linguagens em Jogos</h2>
+                <p>O desenvolvimento de jogos é uma área fascinante que combina arte, design e programação. No coração de muitos jogos estão as "engines" (motores de jogo), que são frameworks de software que fornecem ferramentas e funcionalidades para facilitar a criação de games.</p>
+                <p><strong>Principais Engines de Jogo:</strong></p>
+                <ul>
+                    <li><strong>Unity:</strong> Uma das engines mais populares e versáteis, suporta o desenvolvimento de jogos 2D e 3D para diversas plataformas (PC, mobile, consoles). Utiliza primariamente C# para scripting.</li>
+                    <li><strong>Unreal Engine:</strong> Conhecida por seus gráficos fotorrealistas e ferramentas poderosas. É amplamente utilizada para jogos AAA, visualização arquitetônica e filmes. A linguagem de scripting principal é C++, com o uso de Blueprints (sistema de scripting visual).</li>
+                    <li><strong>Godot Engine:</strong> Uma engine de código aberto, leve e flexível, que suporta 2D e 3D. Utiliza sua própria linguagem de script, GDScript (semelhante ao Python), e também permite C# e C++.</li>
+                    <li><strong>GameMaker Studio:</strong> Focada no desenvolvimento de jogos 2D, com uma interface amigável e sua própria linguagem de script, GML (GameMaker Language).</li>
+                </ul>
+                <p><strong>Linguagens Comuns no Desenvolvimento de Jogos:</strong></p>
+                <ul>
+                    <li><strong>C++:</strong> A linguagem de eleição para alta performance e controle de baixo nível em engines como Unreal Engine e para jogos com requisitos de performance intensos.</li>
+                    <li><strong>C#:</strong> Amplamente utilizada com a Unity Engine, oferecendo um bom equilíbrio entre performance e facilidade de desenvolvimento.</li>
+                    <li><strong>Java:</strong> Utilizada para jogos mobile (especialmente Android) e alguns jogos de PC.</li>
+                    <li><strong>Python:</strong> Embora não seja comum para o core do jogo, é frequentemente usada para scripting, ferramentas de desenvolvimento e automação em estúdios de jogos.</li>
+                    <li><strong>Lua:</strong> Uma linguagem de script leve e rápida, popular para adicionar extensibilidade a jogos e engines, como no Roblox.</li>
+                    <li><strong>JavaScript (com frameworks):</strong> Usada para jogos baseados em navegador e algumas engines como Phaser.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="bugs" class="bugs-section content-section">
+            <div class="container">
+                <h2>Os Inconvenientes da Programação: Lidando com Bugs</h2>
+                <p>Na jornada da programação, os "bugs" são companheiros inevitáveis. Um bug é um erro, falha ou defeito em um programa de computador que causa um resultado inesperado ou incorreto. Eles podem variar de pequenos glitches visuais a falhas de segurança críticas ou travamentos completos do sistema.</p>
+                <h3>Origem e Tipos de Bugs:</h3>
+                <ul>
+                    <li><strong>Erros de Sintaxe:</strong> Ocorrem quando o código não segue as regras gramaticais da linguagem (ex: ponto e vírgula ausente). São geralmente detectados pelo compilador ou interpretador.</li>
+                    <li><strong>Erros de Lógica:</strong> O programa executa sem erros, mas o resultado não é o esperado porque a lógica implementada está incorreta (ex: um cálculo errado, uma condição if/else que não cobre todos os casos).</li>
+                    <li><strong>Erros de Tempo de Execução (Runtime Errors):</strong> Acontecem enquanto o programa está em execução (ex: tentar dividir por zero, acessar uma posição inválida de um array, falta de memória).</li>
+                    <li><strong>Erros de Concorrência:</strong> Em sistemas multi-threaded, ocorrem quando múltiplas operações tentam acessar ou modificar o mesmo recurso simultaneamente de forma não sincronizada, levando a resultados imprevisíveis.</li>
+                    <li><strong>Erros de Integração:</strong> Surgem quando diferentes módulos ou sistemas não interagem corretamente.</li>
+                </ul>
+                <h3>Como as Linguagens Lidam com Bugs (ou não):</h3>
+                <p>A forma como uma linguagem lida com erros pode influenciar a frequência e a dificuldade de depuração dos bugs:</p>
+                <ul>
+                    <li><strong>Linguagens Tipadas Estaticamente (C++, C#, Java, TypeScript, Rust):</strong> Realizam verificações de tipo em tempo de compilação. Isso ajuda a detectar muitos erros antes mesmo do programa rodar, resultando em menos bugs em tempo de execução relacionados a tipos de dados. Por outro lado, podem ter um ciclo de desenvolvimento mais lento devido à necessidade de compilação e às regras de tipagem mais rígidas.</li>
+                    <li><strong>Linguagens Tipadas Dinamicamente (Python, JavaScript, PHP, R):</strong> Realizam verificações de tipo em tempo de execução. Isso oferece maior flexibilidade e um ciclo de desenvolvimento mais rápido, mas pode levar a mais erros em tempo de execução que só são descobertos quando o código é executado em determinadas condições.</li>
+                    <li><strong>Linguagens de Baixo Nível (C, C++, Assembly):</strong> Oferecem grande controle sobre a memória e o hardware, mas isso vem com a responsabilidade de gerenciar a memória manualmente. Erros como vazamentos de memória (memory leaks), acesso a ponteiros nulos ou buffer overflows são comuns e difíceis de depurar.</li>
+                    <li><strong>Linguagens com Gerenciamento Automático de Memória (C#, Java, Python, JavaScript):</strong> Possuem "garbage collectors" que automaticamente liberam memória não utilizada, reduzindo a ocorrência de erros de gerenciamento de memória. No entanto, podem haver problemas de performance ou latência devido ao garbage collector.</li>
+                    <li><strong>Rust:</strong> É projetada para garantir segurança de memória em tempo de compilação sem um garbage collector, usando um sistema de "ownership" e "borrowing". Isso previne muitos bugs de concorrência e memória que são comuns em C/C++, mas tem uma curva de aprendizado mais íngreme.</li>
+                    <li><strong>Brainfuck:</strong> Devido à sua natureza minimalista, os bugs em Brainfuck geralmente são erros de lógica simples ou de contagem de ponteiros, mas a depuração é extremamente desafiadora pela sua sintaxe obscura.</li>
+                </ul>
+                <p>Apesar das diferenças, a depuração (debugging) é uma habilidade essencial para qualquer programador. Ferramentas de depuração, testes unitários, logging e boas práticas de código são fundamentais para minimizar e corrigir bugs de forma eficiente.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Desvendando Linguagens de Programação. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>

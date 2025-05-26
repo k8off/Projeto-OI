@@ -1,0 +1,625 @@
+/* Importação de fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@400;700&display=swap');
+
+/* Reset básico e variáveis - TEMA CLARO PADRÃO */
+:root {
+    --primary-color: #3498db; /* Azul */
+    --secondary-color: #2c3e50; /* Azul escuro do header/footer */
+    --accent-color: #e74c3c; /* Vermelho */
+    --text-color: #333; /* Cor do texto principal */
+    --light-bg: #f4f4f4; /* Fundo de seções claras */
+    --white: #ffffff; /* Cor branca para texto em fundos escuros / fundo de seções claras */
+    --header-text-color: var(--white); /* Cor do texto do header no tema claro */
+    --code-bg: #2d2d2d; /* Fundo dos blocos de código */
+    --code-text: #f8f8f2; /* Texto dos blocos de código */
+    --border-color: #ddd; /* Cor da borda padrão */
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra padrão */
+}
+
+/* Variáveis para TEMA ESCURO */
+body.dark-theme {
+    --primary-color: #9b59b6; /* Roxo */
+    --secondary-color: #1a1a2e; /* Azul bem escuro para header/footer */
+    --accent-color: #f1c40f; /* Amarelo */
+    --text-color: #ecf0f1; /* Cor do texto claro para o corpo */
+    --light-bg: #282a36; /* Fundo de seções escuras (Dracula-like) */
+    --white: #44475a; /* Fundo de seções 'brancas' no tema escuro */
+    --header-text-color: #ecf0f1; /* Cor do texto do header no tema escuro (um cinza bem claro) */
+    --code-bg: #1e1e1e; /* Fundo dos blocos de código mais escuro */
+    --code-text: #f8f8f2; /* Texto dos blocos de código (mantido claro) */
+    --border-color: #383838; /* Borda escura */
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Sombra mais escura */
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-bg);
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave para o tema */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Cabeçalho */
+header {
+    background-color: var(--secondary-color);
+    color: var(--header-text-color); /* Usando a nova variável aqui */
+    padding: 15px 0;
+    box-shadow: var(--box-shadow);
+    z-index: 1000;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 10px;
+    color: var(--header-text-color); /* E também para o H1 */
+}
+
+header nav {
+    width: 100%;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+header nav ul li a {
+    color: var(--header-text-color); /* E para os links de navegação */
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1em;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: var(--border-radius);
+    display: block;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    background-color: var(--primary-color);
+    color: var(--white); /* White aqui é sempre branco para o texto do hover */
+}
+
+/* Dropdown para Linguagens */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown .dropbtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+.dropdown .dropbtn .arrow-down {
+    border: solid var(--header-text-color); /* A cor da seta também usa a nova variável */
+    border-width: 0 2px 2px 0;
+    margin-left: 5px;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.dropdown:hover .dropbtn .arrow-down {
+    transform: rotate(225deg);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--secondary-color);
+    min-width: 300px;
+    box-shadow: var(--box-shadow);
+    z-index: 2000;
+    border-radius: var(--border-radius);
+    top: calc(100% + 5px);
+    left: 0;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dropdown-content a {
+    color: var(--header-text-color); /* E para os links do dropdown */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-weight: 400;
+    font-size: 1em;
+    white-space: nowrap;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Botão de alternar tema (posição e estilo base) */
+.theme-toggle-button {
+    background: none;
+    border: none;
+    color: var(--header-text-color); /* E para o ícone de sol/lua */
+    font-size: 1.8em;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
+    transition: color 0.3s ease, transform 0.2s ease;
+    padding: 5px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-toggle-button:hover {
+    color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+/* Ícones de sol e lua */
+#sun-icon, #moon-icon {
+    position: absolute;
+    transition: opacity 0.3s ease;
+}
+
+/* No tema claro (padrão), o sol aparece e a lua esconde */
+#moon-icon {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* No tema escuro, o sol esconde e a lua aparece */
+body.dark-theme #sun-icon {
+    opacity: 0;
+    pointer-events: none;
+}
+
+body.dark-theme #moon-icon {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+/* Seção Hero */
+.hero {
+    background: url('images/hero_bg.jpg') no-repeat center center/cover;
+    color: var(--white);
+    text-align: center;
+    padding: 100px 20px;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+body.dark-theme .hero::before {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+
+.hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero p {
+    font-size: 1.4em;
+    max-width: 800px;
+    margin: 0 auto;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Seções de Conteúdo */
+.content-section {
+    padding: 60px 0;
+    background-color: var(--white);
+    margin-bottom: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content-section:nth-of-type(odd) {
+    background-color: var(--light-bg);
+}
+
+.content-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.8em;
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+    position: relative;
+    padding-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.content-section h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+    transition: background-color 0.3s ease;
+}
+
+.content-section p,
+.content-section ul {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    text-align: justify;
+    color: var(--text-color);
+}
+
+.content-section ul {
+    list-style-type: disc;
+    margin-left: 25px;
+}
+
+.content-section li {
+    margin-bottom: 8px;
+}
+
+/* Blocos de Linguagem */
+.languages-overview .container {
+    display: block;
+}
+
+.language-block {
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    margin-bottom: 40px;
+    box-shadow: var(--box-shadow);
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.language-block:last-child {
+    margin-bottom: 0;
+}
+
+.language-block img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 25px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.language-block h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    color: var(--secondary-color);
+    margin-bottom: 25px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.language-block h3::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+    transition: background-color 0.3s ease;
+}
+
+
+.language-block h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8em;
+    color: var(--primary-color);
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 5px;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.language-block p {
+    font-size: 1.1em;
+    color: var(--text-color);
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.language-block strong {
+    font-weight: 700;
+}
+
+/* Estilos para os exemplos de código */
+pre {
+    background-color: var(--code-bg);
+    color: var(--code-text);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    overflow-x: auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 0.95em;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    word-break: break-all;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+pre code {
+    font-family: 'Fira Code', 'Roboto Mono', monospace, sans-serif;
+    display: block;
+}
+
+/* Melhorias de legibilidade para o código (mantidas com cores fixas) */
+.language-c, .language-cpp, .language-csharp, .language-objectivec {
+    color: #8be9fd;
+}
+.language-python {
+    color: #50fa7b;
+}
+.language-html, .language-css {
+    color: #ffb86c;
+}
+.language-javascript, .language-typescript {
+    color: #f1fa8c;
+}
+.language-sql {
+    color: #bd93f9;
+}
+.language-php {
+    color: #ff79c6;
+}
+.language-rust {
+    color: #ff6e6e;
+}
+.language-r {
+    color: #6272a4;
+}
+
+/* Seção de Engine e Jogos */
+.engine-games ul {
+    list-style-type: circle;
+    margin-left: 30px;
+}
+
+.engine-games h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6em;
+    color: var(--primary-color);
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+/* Seção de Bugs */
+.bugs-section h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6em;
+    color: var(--primary-color);
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.bugs-section ul {
+    list-style-type: square;
+    margin-left: 30px;
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+        color: var(--header-text-color); /* Garante que H1 se adapta em mobile */
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    header nav ul li a {
+        color: var(--header-text-color); /* Garante que links se adaptam em mobile */
+    }
+
+    .dropdown {
+        width: 100%;
+    }
+
+    .dropdown-content {
+        position: static;
+        width: 100%;
+        transform: translateX(0);
+        box-shadow: none;
+        border-radius: 0;
+        margin-top: 5px;
+        max-height: none;
+        overflow-y: visible;
+        z-index: auto;
+    }
+
+    .dropdown-content a {
+        color: var(--header-text-color); /* Garante que links do dropdown se adaptam em mobile */
+    }
+
+    /* Ajuste do botão de tema em telas menores */
+    .theme-toggle-button {
+        position: static;
+        margin-top: 15px;
+        margin-right: auto;
+        margin-left: auto;
+        width: auto;
+        height: auto;
+        font-size: 1.5em;
+        padding: 5px 10px;
+        border-radius: var(--border-radius);
+        background-color: var(--primary-color);
+        color: var(--white); /* Ícone no botão em mobile também branco */
+        display: flex;
+    }
+
+    .theme-toggle-button #sun-icon,
+    .theme-toggle-button #moon-icon {
+        position: static;
+    }
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero h2 {
+        font-size: 2.5em;
+    }
+
+    .hero p {
+        font-size: 1.2em;
+    }
+
+    .content-section {
+        padding: 40px 0;
+    }
+
+    .content-section h2 {
+        font-size: 2.2em;
+        margin-bottom: 30px;
+    }
+
+    .language-block img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .language-block h3 {
+        font-size: 2em;
+    }
+
+    .language-block h4 {
+        font-size: 1.5em;
+    }
+
+    pre {
+        padding: 15px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    header nav ul li a {
+        font-size: 1em;
+        padding: 8px 10px;
+    }
+
+    .hero h2 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .content-section h2 {
+        font-size: 1.8em;
+    }
+
+    .language-block h3 {
+        font-size: 1.8em;
+    }
+
+    .language-block h4 {
+        font-size: 1.3em;
+    }
+}
