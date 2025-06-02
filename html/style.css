@@ -3,7 +3,7 @@
 
 /* Reset básico e variáveis - TEMA CLARO PADRÃO */
 :root {
-    --primary-color: #3498db; /* Azul */
+    --primary-color: #4CAF50; /* Verde Material Design - ALTERADO DE AZUL PARA VERDE */
     --secondary-color: #2c3e50; /* Azul escuro do header/footer */
     --accent-color: #e74c3c; /* Vermelho */
     --text-color: #333; /* Cor do texto principal */
@@ -19,7 +19,7 @@
 
 /* Variáveis para TEMA ESCURO */
 body.dark-theme {
-    --primary-color: #9b59b6; /* Roxo */
+    --primary-color: #388E3C; /* Verde Material Design Escuro - ALTERADO DE ROXO PARA VERDE */
     --secondary-color: #1a1a2e; /* Azul bem escuro para header/footer */
     --accent-color: #f1c40f; /* Amarelo */
     --text-color: #ecf0f1; /* Cor do texto claro para o corpo */
