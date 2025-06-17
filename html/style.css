@@ -1,11 +1,11 @@
 /* Importação de fontes do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@400;700&display=swap');
 
-/* Reset básico e variáveis - TEMA CLARO PADRÃO */
+/* Reset básico e variáveis*/
 :root {
-    --primary-color: #4CAF50; /* Verde Material Design - ALTERADO DE AZUL PARA VERDE */
-    --secondary-color: #2c3e50; /* Azul escuro do header/footer */
-    --accent-color: #e74c3c; /* Vermelho */
+    --primary-color: #4CAF50; /* Verde Principal */
+    --secondary-color: #1B5E20; /* Verde escuro para header/footer */
+    --accent-color: var(--primary-color); /* Verde como cor de destaque */
     --text-color: #333; /* Cor do texto principal */
     --light-bg: #f4f4f4; /* Fundo de seções claras */
     --white: #ffffff; /* Cor branca para texto em fundos escuros / fundo de seções claras */
@@ -17,19 +17,20 @@
     --border-radius: 8px; /* Adicionado para bordas arredondadas */
 }
 
-/* Variáveis para TEMA ESCURO */
+/* Variáveis para TEMA ESCURO*/
 body.dark-theme {
-    --primary-color: #388E3C; /* Verde Material Design Escuro - ALTERADO DE ROXO PARA VERDE */
-    --secondary-color: #1a1a2e; /* Azul bem escuro para header/footer */
+    --primary-color: #388E3C; /* Verde Escuro (COR PRINCIPAL) */
+    --secondary-color: #000000; /* Preto para header/footer */
     --accent-color: #f1c40f; /* Amarelo */
     --text-color: #ecf0f1; /* Cor do texto claro para o corpo */
-    --light-bg: #282a36; /* Fundo de seções escuras (Dracula-like) */
-    --white: #44475a; /* Fundo de seções 'brancas' no tema escuro */
+    --light-bg: #121212; /* Fundo principal quase preto */
+    --white: #1E1E1E; /* Fundo de seções 'brancas' no tema escuro (cinza bem escuro) */
     --header-text-color: #b3bacc; /* Cor do texto do header no tema escuro */
-    --code-bg: #1e1e1e; /* Fundo dos blocos de código mais escuro */
+    --code-bg: #0d0d0d; /* Fundo dos blocos de código mais escuro, quase preto */
     --code-text: #f8f8f2; /* Texto dos blocos de código (mantido claro) */
-    --border-color: #383838; /* Borda escura */
-    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Sombra mais escura */
+    --border-color: #333333; /* Borda escura */
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Sombra mais escura */
+    --language-title-color: #50fa7b; /* Verde claro para títulos de linguagens no modo escuro */
 }
 
 
@@ -142,7 +143,6 @@ header nav ul li a.active {
 }
 
 .dropdown-content {
-    /* MUDANÇAS AQUI PARA TRANSIÇÃO */
     opacity: 0; /* Começa invisível */
     visibility: hidden; /* Garante que não é clicável/selecionável quando invisível */
     transition: opacity 0.3s ease-out, visibility 0.3s ease-out; /* Transição de 0.3s */
@@ -155,7 +155,6 @@ header nav ul li a.active {
     border-radius: var(--border-radius);
     top: calc(100% + 5px);
     left: 0;
-    /* transition: background-color 0.3s ease, box-shadow 0.3s ease; */ /* Remova ou comente esta linha */
 }
 
 /* Quando o mouse está sobre o dropdown (ou seu botão) */
@@ -234,7 +233,7 @@ body.dark-theme #moon-icon {
 /* Seção Hero */
 .hero {
     background: url('images/hero_bg.jpg') no-repeat center center/cover;
-    color: var(--white);
+    color: #ffffff; /* Alterado para branco fixo para garantir contraste em ambos os temas */
     text-align: center;
     padding: 100px 20px;
     min-height: 400px;
@@ -375,13 +374,19 @@ body.dark-theme .hero::before {
 .language-block h3 {
     font-family: 'Montserrat', sans-serif;
     font-size: 2.5em;
-    color: var(--secondary-color);
+    color: var(--primary-color); /* MUDANÇA: Título da linguagem sempre verde no tema claro */
     margin-bottom: 25px;
     text-align: center;
     position: relative;
     padding-bottom: 10px;
     transition: color 0.3s ease;
 }
+
+/* MUDANÇA: Título da linguagem verde claro no tema escuro para contraste */
+body.dark-theme .language-block h3 {
+    color: var(--language-title-color);
+}
+
 
 .language-block h3::after {
     content: '';
@@ -440,7 +445,7 @@ pre code {
     display: block;
 }
 
-/* Melhorias de legibilidade para o código (mantidas com cores fixas) */
+/* Melhorias de legibilidade para o código */
 .language-c, .language-cpp, .language-csharp, .language-objectivec {
     color: #8be9fd;
 }
@@ -497,7 +502,7 @@ pre code {
 /* Rodapé */
 footer {
     background-color: var(--secondary-color);
-    color: var(--white); /* Rodapé agora usa a cor branca para o texto */
+    color: var(--header-text-color); /* Alterado para usar uma cor clara e consistente */
     text-align: center;
     padding: 20px 0;
     margin-top: 30px;
@@ -567,7 +572,7 @@ footer p {
         padding: 5px 10px;
         border-radius: var(--border-radius);
         background-color: var(--primary-color);
-        color: var(--white); /* Ícone no botão em mobile também branco */
+        color: #ffffff; /* Ícone no botão em mobile também branco */
         display: flex;
     }
 

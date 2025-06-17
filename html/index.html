@@ -326,23 +326,33 @@ print(paste("A média dos dados é:", media_dados))
         <section id="engine-jogos" class="engine-games content-section">
             <div class="container">
                 <h2>Engine e Linguagens em Jogos</h2>
-                <p>O desenvolvimento de jogos é uma área fascinante que combina arte, design e programação. No coração de muitos jogos estão as "engines" (motores de jogo), que são frameworks de software que fornecem ferramentas e funcionalidades para facilitar a criação de games.</p>
-                <p><strong>Principais Engines de Jogo:</strong></p>
-                <ul>
-                    <li><strong>Unity:</strong> Uma das engines mais populares e versáteis, suporta o desenvolvimento de jogos 2D e 3D para diversas plataformas (PC, mobile, consoles). Utiliza primariamente C# para scripting.</li>
-                    <li><strong>Unreal Engine:</strong> Conhecida por seus gráficos fotorrealistas e ferramentas poderosas. É amplamente utilizada para jogos AAA, visualização arquitetônica e filmes. A linguagem de scripting principal é C++, com o uso de Blueprints (sistema de scripting visual).</li>
-                    <li><strong>Godot Engine:</strong> Uma engine de código aberto, leve e flexível, que suporta 2D e 3D. Utiliza sua própria linguagem de script, GDScript (semelhante ao Python), e também permite C# e C++.</li>
-                    <li><strong>GameMaker Studio:</strong> Focada no desenvolvimento de jogos 2D, com uma interface amigável e sua própria linguagem de script, GML (GameMaker Language).</li>
-                </ul>
-                <p><strong>Linguagens Comuns no Desenvolvimento de Jogos:</strong></p>
-                <ul>
-                    <li><strong>C++:</strong> A linguagem de eleição para alta performance e controle de baixo nível em engines como Unreal Engine e para jogos com requisitos de performance intensos.</li>
-                    <li><strong>C#:</strong> Amplamente utilizada com a Unity Engine, oferecendo um bom equilíbrio entre performance e facilidade de desenvolvimento.</li>
-                    <li><strong>Java:</strong> Utilizada para jogos mobile (especialmente Android) e alguns jogos de PC.</li>
-                    <li><strong>Python:</strong> Embora não seja comum para o core do jogo, é frequentemente usada para scripting, ferramentas de desenvolvimento e automação em estúdios de jogos.</li>
-                    <li><strong>Lua:</strong> Uma linguagem de script leve e rápida, popular para adicionar extensibilidade a jogos e engines, como no Roblox.</li>
-                    <li><strong>JavaScript (com frameworks):</strong> Usada para jogos baseados em navegador e algumas engines como Phaser.</li>
-                </ul>
+                <p>O desenvolvimento de jogos é uma área fascinante que combina arte, design e programação. No coração de muitos jogos estão as "engines" (motores de jogo), que são frameworks de software que fornecem ferramentas e funcionalidades essenciais para agilizar e simplificar o processo de criação, desde a renderização de gráficos até a física e a lógica do jogo.</p>
+                
+                <h4>Unity</h4>
+                <p>Uma das engines mais populares e versáteis do mundo, amplamente utilizada por desenvolvedores indie e grandes estúdios. Suporta o desenvolvimento de jogos 2D e 3D para praticamente todas as plataformas (PC, mobile, consoles). Utiliza primariamente <strong>C#</strong> para scripting e é conhecida por sua vasta Asset Store, que oferece inúmeros recursos prontos para uso.</p>
+                <p><strong>Exemplos de Jogos:</strong> <em>Hollow Knight, Genshin Impact, Cuphead, Among Us</em>.</p>
+
+                <h4>Unreal Engine</h4>
+                <p>Desenvolvida pela Epic Games, é a engine de escolha para jogos AAA que exigem gráficos fotorrealistas e performance de ponta. As versões mais recentes, como a Unreal Engine 5, introduziram tecnologias revolucionárias como Nanite (geometria virtualizada) e Lumen (iluminação global dinâmica). A linguagem de scripting principal é <strong>C++</strong> para máxima performance, complementada pelo <strong>Blueprints</strong>, um poderoso sistema de scripting visual que permite a criação de lógica de jogo sem escrever código.</p>
+                <p><strong>Exemplos de Jogos:</strong> <em>Fortnite, The Witcher 3: Wild Hunt, Street Fighter 6, Final Fantasy VII Remake</em>.</p>
+                
+                <h4>Godot Engine</h4>
+                <p>Uma engine de código aberto, leve e flexível que tem ganhado imensa popularidade por ser completamente gratuita e sem royalties. Suporta desenvolvimento 2D e 3D e se destaca pelo seu sistema de cenas baseado em nós. Utiliza uma linguagem própria e fácil de aprender, a <strong>GDScript</strong> (semelhante a Python), mas também oferece suporte oficial para <strong>C#</strong> e <strong>C++</strong>.</p>
+                <p><strong>Exemplos de Jogos:</strong> <em>Cassette Beasts, Brotato, Dome Keeper</em>.</p>
+
+                <h4>GameMaker Studio</h4>
+                <p>Com um foco especial no desenvolvimento de jogos 2D, esta engine é famosa por sua interface amigável e por agilizar o fluxo de trabalho, sendo uma excelente porta de entrada para iniciantes. Utiliza sua própria linguagem de script, a <strong>GML (GameMaker Language)</strong>, que é flexível e poderosa para projetos 2D. Foi a ferramenta por trás de alguns dos jogos indie mais icônicos da história.</p>
+                <p><strong>Exemplos de Jogos:</strong> <em>Undertale, Hotline Miami, Hyper Light Drifter, Risk of Rain</em>.</p>
+                
+                <h4>CryEngine</h4>
+                <p>Originalmente criada para o jogo <em>Far Cry</em> e famosa pela franquia <em>Crysis</em>, a CryEngine sempre foi sinônimo de gráficos de vanguarda e ambientes naturais impressionantes. É uma engine poderosa para jogos de tiro em primeira pessoa e mundos abertos. Utiliza <strong>C++</strong> para a programação principal, com suporte a <strong>Lua</strong> e a um sistema de scripting visual chamado Schematyc.</p>
+                <p><strong>Exemplos de Jogos:</strong> <em>Crysis (série), Hunt: Showdown, Ryse: Son of Rome</em>.</p>
+                
+                <h4>Phaser</h4>
+                <p>Mais do que uma engine completa, o Phaser é um framework 2D de código aberto para a criação de jogos em HTML5 que rodam diretamente no navegador. É rápido, gratuito e possui uma comunidade muito ativa. Se você quer criar jogos para a web, esta é uma das melhores escolhas. A programação é feita em <strong>JavaScript</strong> ou <strong>TypeScript</strong>.</p>
+                <p><strong>Exemplos de Jogos:</strong> Por ser um framework web, é usado em milhares de jogos de navegador e portais online.</p>
+                
+                <p style="margin-top: 30px;"><strong>Outras linguagens</strong> como <strong>Java</strong> (usada em jogos para Android e títulos como <em>Minecraft: Java Edition</em>) e <strong>Lua</strong> (uma linguagem de script leve e rápida, popular para embutir em engines e jogos, como em <em>Roblox</em> e <em>World of Warcraft</em>) também desempenham um papel vital no ecossistema de desenvolvimento de jogos.</p>
             </div>
         </section>
 
