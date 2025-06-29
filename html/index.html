@@ -66,9 +66,13 @@
                     <img src="images/c_logo.png" alt="Logo da Família C">
                     <h3>A Família C: C, C++, C#, Objective-C</h3>
                     <p>A linguagem C é uma das bases da computação moderna, influenciando inúmeras outras linguagens. Conhecida por sua eficiência e controle de baixo nível, é amplamente usada em sistemas operacionais e software embarcado.</p>
+                    
                     <h4>C</h4>
-                    <p><strong>Características:</strong> Linguagem procedural, compilada, oferece acesso direto à memória através de ponteiros, alta performance.</p>
+                    <p><strong>História e Criação:</strong> Desenvolvida por Dennis Ritchie no Bell Labs por volta de 1972. Foi criada com o objetivo específico de reescrever o sistema operacional Unix, buscando uma linguagem que fosse eficiente e portável.</p>
+                    <p><strong>Características:</strong> Linguagem procedural, compilada, oferece acesso direto à memória através de ponteiros, alta performance. É considerada a "língua franca" da programação, com a qual muitas outras linguagens e sistemas conseguem interagir.</p>
                     <p><strong>Aplicações Comuns:</strong> Sistemas operacionais (Unix, Linux, Windows kernel), firmware, sistemas embarcados, desenvolvimento de drivers.</p>
+                    <p><strong>Pontos Fortes e Fracos:</strong> Sua maior força é o controle de baixo nível e a performance. Sua maior fraqueza é a mesma: o gerenciamento manual de memória é poderoso, mas é uma fonte comum de bugs e vulnerabilidades de segurança (como buffer overflows).</p>
+                    <p><strong>Curiosidade:</strong> O kernel da maioria dos sistemas operacionais modernos, incluindo Windows, Linux e macOS, é escrito primariamente em C.</p>
                     <p><strong>Exemplo de Código (Olá, Mundo em C):</strong></p>
                     <pre><code class="language-c">#include &lt;stdio.h&gt;
 
@@ -79,8 +83,11 @@ int main() {
 </code></pre>
 
                     <h4>C++</h4>
-                    <p><strong>Características:</strong> Extensão do C com recursos de programação orientada a objetos (POO), genéricos, exceções, alto desempenho para sistemas complexos.</p>
+                    <p><strong>História e Criação:</strong> Criada por Bjarne Stroustrup, também no Bell Labs, a partir de 1979. Stroustrup queria adicionar recursos de programação orientada a objetos (inspirados em Simula) à linguagem C para criar sistemas complexos de forma mais organizada.</p>
+                    <p><strong>Características:</strong> Extensão do C com recursos de programação orientada a objetos (POO), genéricos, exceções, alto desempenho. É uma linguagem multiparadigma, suportando programação procedural, orientada a objetos e funcional.</p>
                     <p><strong>Aplicações Comuns:</strong> Desenvolvimento de jogos (engines como Unreal), software de sistemas, navegadores web, aplicações financeiras de alta frequência.</p>
+                    <p><strong>Pontos Fortes e Fracos:</strong> É extremamente rápida e poderosa, mas sua complexidade e a necessidade de gerenciar memória manualmente a tornam difícil de aprender e propensa a erros.</p>
+                    <p><strong>Curiosidade:</strong> O nome "C++" é uma brincadeira com o operador de incremento da linguagem C (`++`), sugerindo que é um passo à frente do C.</p>
                     <p><strong>Exemplo de Código (Olá, Mundo em C++):</strong></p>
                     <pre><code class="language-cpp">#include &lt;iostream&gt;
 
@@ -91,8 +98,11 @@ int main() {
 </code></pre>
 
                     <h4>C#</h4>
-                    <p><strong>Características:</strong> Linguagem moderna orientada a objetos, desenvolvida pela Microsoft para a plataforma .NET, tipagem forte, coleta de lixo automática, integração com ecossistema Microsoft.</p>
+                    <p><strong>História e Criação:</strong> Desenvolvida pela Microsoft sob a liderança de Anders Hejlsberg e lançada em 2000. Foi criada como parte da iniciativa .NET para ser uma linguagem moderna e orientada a objetos, competindo diretamente com o Java.</p>
+                    <p><strong>Características:</strong> Linguagem moderna orientada a objetos, desenvolvida pela Microsoft para a plataforma .NET, tipagem forte, coleta de lixo automática. Com o .NET Core (agora apenas .NET), tornou-se totalmente multiplataforma.</p>
                     <p><strong>Aplicações Comuns:</strong> Desenvolvimento de aplicações Windows, desenvolvimento web (ASP.NET), desenvolvimento de jogos (Unity), aplicações mobile (Xamarin).</p>
+                    <p><strong>Pontos Fortes e Fracos:</strong> É uma linguagem robusta, versátil e com um ecossistema poderoso (Unity, .NET). Sua principal fraqueza histórica era a dependência do Windows, mas isso foi em grande parte resolvido.</p>
+                    <p><strong>Curiosidade:</strong> O nome "C#" foi inspirado na notação musical, onde um sustenido (#) indica que a nota deve ser tocada um semitom mais alta, sugerindo que C# é um incremento sobre C++.</p>
                     <p><strong>Exemplo de Código (Olá, Mundo em C#):</strong></p>
                     <pre><code class="language-csharp">using System;
 
@@ -104,8 +114,11 @@ public class Program {
 </code></pre>
 
                     <h4>Objective-C</h4>
-                    <p><strong>Características:</strong> Extensão do C que adiciona recursos de Smalltalk (programação orientada a objetos baseada em mensagens), usado historicamente para desenvolvimento Apple.</p>
+                    <p><strong>História e Criação:</strong> Criada no início dos anos 1980 por Brad Cox e Tom Love. O objetivo era combinar a robustez do C com a flexibilidade da programação orientada a objetos de Smalltalk. Foi posteriormente adquirida pela NeXT e, mais tarde, pela Apple, tornando-se a principal linguagem para macOS e iOS por décadas.</p>
+                    <p><strong>Características:</strong> Extensão do C que adiciona recursos de Smalltalk (programação orientada a objetos baseada em mensagens), tipagem dinâmica e estática. Sua sintaxe é conhecida por ser mais verbosa que a de outras linguagens.</p>
                     <p><strong>Aplicações Comuns:</strong> Desenvolvimento de aplicativos para macOS e iOS (legado, substituído em grande parte por Swift).</p>
+                    <p><strong>Pontos Fortes e Fracos:</strong> Seu sistema de mensagens é muito flexível. No entanto, sua sintaxe é verbosa e hoje é considerada obsoleta em favor do Swift.</p>
+                    <p><strong>Curiosidade:</strong> Antes da chegada do Swift em 2014, todo o ecossistema de aplicativos da Apple foi construído sobre o Objective-C.</p>
                     <p><strong>Exemplo de Código (Olá, Mundo em Objective-C):</strong></p>
                     <pre><code class="language-objectivec">#import &lt;Foundation/Foundation.h&gt;
 
@@ -121,15 +134,12 @@ int main(int argc, const char * argv[]) {
                 <article id="linguagem-java" class="language-block">
                     <img src="images/java_logo.png" alt="Logo Java"> <h3>Java</h3>
                     <p>Java é uma linguagem de programação orientada a objetos, popular, robusta e independente de plataforma, conhecida pelo seu lema "Write Once, Run Anywhere" (WORA). É amplamente utilizada em aplicações corporativas, desenvolvimento mobile (Android) e sistemas de grande escala.</p>
-                    <p><strong>Características:</strong> Orientada a objetos, compilada para bytecode (executado na Java Virtual Machine - JVM), gerenciamento automático de memória (garbage collection), tipagem estática forte, grande ecossistema e bibliotecas.</p>
+                    <h4>História e Criação</h4>
+                    <p>Criada por James Gosling na Sun Microsystems em 1991, como parte de um projeto chamado "Green". A linguagem, inicialmente chamada de "Oak", foi projetada para dispositivos eletrônicos, mas seu potencial para a web foi rapidamente percebido, levando ao seu lançamento oficial em 1995.</p>
+                    <p><strong>Características:</strong> Orientada a objetos, compilada para bytecode (executado na Java Virtual Machine - JVM), gerenciamento automático de memória (garbage collection), tipagem estática forte, grande ecossistema e bibliotecas. A JVM é a chave para sua portabilidade, atuando como uma camada de abstração entre o código e o sistema operacional.</p>
                     <p><strong>Aplicações Comuns:</strong> Aplicações corporativas (backend), desenvolvimento de aplicativos Android, sistemas embarcados, aplicações científicas, Big Data (Hadoop).</p>
-                    <p><strong>Exemplo de Código (Olá, Mundo em Java):</strong></p>
-                    <pre><code class="language-java">public class HelloWorld {
-    public static void main(String[] args) {
-        System.out.println("Olá, Mundo!");
-    }
-}
-</code></pre>
+                    <p><strong>Curiosidade:</strong> O nome original da linguagem era "Oak" (Carvalho), inspirado em uma árvore que ficava do lado de fora do escritório de Gosling. Foi renomeada para Java, supostamente por causa do café que os desenvolvedores bebiam.</p>
+                    <p><strong>Pontos Fortes e Fracos:</strong> Sua estabilidade e ecossistema maduro são grandes vantagens. No entanto, pode ser mais verbosa e consumir mais memória do que linguagens mais recentes.</p>
                     <p><strong>Exemplo de Código (Classe simples em Java):</strong></p>
                     <pre><code class="language-java">class Cachorro {
     String nome;
@@ -144,7 +154,7 @@ int main(int argc, const char * argv[]) {
 
     public static void main(String[] args) {
         Cachorro meuCachorro = new Cachorro("Rex");
-        meuCachorro.latir();
+        meuCachorro.latir(); // Saída: Rex diz: Au au!
     }
 }
 </code></pre>
@@ -154,14 +164,16 @@ int main(int argc, const char * argv[]) {
                     <img src="images/python_logo.png" alt="Logo Python">
                     <h3>Python</h3>
                     <p>Python é uma linguagem de programação de alto nível, interpretada, com uma sintaxe clara e legível, o que facilita o aprendizado e a produtividade. Sua vasta biblioteca padrão e o grande número de bibliotecas de terceiros a tornam adequada para diversas tarefas.</p>
-                    <p><strong>Características:</strong> Interpretada, tipagem dinâmica, multiparadigma (orientada a objetos, procedural, funcional), grande comunidade e suporte.</p>
+                    <h4>História e Criação</h4>
+                    <p>Criada por Guido van Rossum no final dos anos 1980, com sua primeira versão lançada em 1991. Van Rossum desenvolveu o Python como um sucessor da linguagem ABC, com foco em simplicidade, legibilidade e código limpo.</p>
+                    <p><strong>Características:</strong> Interpretada, tipagem dinâmica, multiparadigma (orientada a objetos, procedural, funcional), grande comunidade e suporte. Sua filosofia "batteries included" (baterias incluídas) significa que sua biblioteca padrão é extremamente rica.</p>
                     <p><strong>Aplicações Comuns:</strong> Desenvolvimento web (Django, Flask), ciência de dados (Pandas, NumPy, Scikit-learn), inteligência artificial e machine learning (TensorFlow, PyTorch), automação de tarefas, scripting.</p>
-                    <p><strong>Exemplo de Código (Olá, Mundo em Python):</strong></p>
-                    <pre><code class="language-python">print("Olá, Mundo!")
-</code></pre>
-                    <p><strong>Exemplo de Código (Leitura de entrada e saudação):</strong></p>
-                    <pre><code class="language-python">nome = input("Digite seu nome: ")
-print(f"Olá, {nome}!")
+                    <p><strong>Pontos Fortes e Fracos:</strong> É extremamente fácil de aprender e usar, com um vasto ecossistema de bibliotecas. Sua principal fraqueza é o desempenho, sendo mais lenta que linguagens compiladas para tarefas intensivas.</p>
+                    <p><strong>Curiosidade:</strong> O nome não vem da cobra, mas sim do grupo de comédia britânico Monty Python's Flying Circus, do qual Guido van Rossum era fã.</p>
+                    <p><strong>Exemplo de Código (List Comprehension em Python):</strong></p>
+                    <pre><code class="language-python"># Cria uma lista com o quadrado dos números pares de 0 a 9
+numeros_pares_ao_quadrado = [x**2 for x in range(10) if x % 2 == 0]
+print(numeros_pares_ao_quadrado) # Saída: [0, 4, 16, 36, 64]
 </code></pre>
                 </article>
 
@@ -169,8 +181,12 @@ print(f"Olá, {nome}!")
                     <img src="images/html_logo.png" alt="Logo HTML">
                     <h3>HTML (HyperText Markup Language)</h3>
                     <p>HTML não é uma linguagem de programação, mas sim a linguagem de marcação padrão para criar páginas web. Ela define a estrutura e o conteúdo dos documentos web.</p>
-                    <p><strong>Características:</strong> Linguagem de marcação baseada em tags, estrutura hierárquica, utilizada para criar a semântica do conteúdo web.</p>
+                    <h4>História e Criação</h4>
+                    <p>Criado por Tim Berners-Lee em 1991, enquanto trabalhava no CERN. A motivação era criar uma forma simples para que pesquisadores pudessem compartilhar e acessar documentos e informações através da internet.</p>
+                    <p><strong>Características:</strong> Linguagem de marcação baseada em tags, estrutura hierárquica, utilizada para criar a semântica do conteúdo web. A versão mais recente, HTML5, introduziu novas tags semânticas (`&lt;article&gt;`, `&lt;section&gt;`, `&lt;nav&gt;`) e APIs para áudio, vídeo e gráficos.</p>
                     <p><strong>Aplicações Comuns:</strong> Criação da estrutura de todas as páginas web, base para aplicações web e interfaces de usuário.</p>
+                     <p><strong>Pontos Fortes e Fracos:</strong> É o padrão universal da web e é fácil de aprender. Sua fraqueza é que, sendo apenas para estrutura, não pode criar lógica ou interatividade sozinha.</p>
+                    <p><strong>Curiosidade:</strong> A primeira versão do HTML tinha apenas 18 tags. Hoje, existem mais de 100.</p>
                     <p><strong>Exemplo de Código (Estrutura básica de um documento HTML):</strong></p>
                     <pre><code class="language-html">&lt;!DOCTYPE html&gt;
 &lt;html lang="pt-BR"&gt;
@@ -190,14 +206,20 @@ print(f"Olá, {nome}!")
                     <img src="images/css_logo.png" alt="Logo CSS">
                     <h3>CSS (Cascading Style Sheets)</h3>
                     <p>CSS é uma linguagem de folhas de estilo usada para descrever a apresentação de um documento HTML (ou XML). Ela controla o layout, cores, fontes e outros aspectos visuais das páginas web.</p>
-                    <p><strong>Características:</strong> Linguagem de estilo baseada em seletores e regras, permite separar a apresentação da estrutura do conteúdo.</p>
-                    <p><strong>Aplicações Comuns:</strong> Estilização de páginas web, criação de layouts responsivos, animações e efeitos visuais.</p>
+                    <h4>História e Criação</h4>
+                    <p>Proposto pela primeira vez por Håkon Wium Lie em 1994, enquanto também trabalhava no CERN. A ideia era separar o conteúdo (HTML) da sua apresentação visual, permitindo que desenvolvedores tivessem mais controle sobre o design das páginas. Bert Bos foi um co-criador fundamental.</p>
+                    <p><strong>Características:</strong> Linguagem de estilo baseada em seletores e regras, permite separar a apresentação da estrutura do conteúdo. O "Cascading" (cascata) refere-se à forma como as regras de estilo são aplicadas com base na especificidade, herança e ordem no código.</p>
+                    <p><strong>Aplicações Comuns:</strong> Estilização de páginas web, criação de layouts responsivos (com Flexbox e Grid), animações e efeitos visuais.</p>
+                    <p><strong>Pontos Fortes e Fracos:</strong> Permite um controle visual imenso e a reutilização de estilos. Pode se tornar complexa e difícil de gerenciar em projetos grandes (o que leva ao uso de metodologias como BEM ou frameworks como Tailwind CSS).</p>
+                    <p><strong>Curiosidade:</strong> O "Cascading" (cascata) refere-se à forma como as regras de estilo de diferentes fontes (navegador, usuário, autor) são aplicadas em uma ordem de prioridade específica para determinar o estilo final de um elemento.</p>
                     <p><strong>Exemplo de Código (Estilizando um título e um parágrafo):</strong></p>
-                    <pre><code class="language-css">h1 {
+                    <pre><code class="language-css">/* Define a cor do h1 como azul e o alinha ao centro */
+h1 {
     color: blue;
     text-align: center;
 }
 
+/* Define o tamanho da fonte e o espaçamento entre linhas do parágrafo */
 p {
     font-size: 16px;
     line-height: 1.5;
@@ -209,15 +231,19 @@ p {
                     <img src="images/javascript_logo.png" alt="Logo JavaScript">
                     <h3>JavaScript</h3>
                     <p>JavaScript é uma linguagem de programação de alto nível, interpretada, essencial para adicionar interatividade e dinamismo a páginas web. Com Node.js, também é utilizada no desenvolvimento backend.</p>
-                    <p><strong>Características:</strong> Interpretada, tipagem dinâmica, orientada a objetos (prototipal), baseada em eventos, roda no navegador (client-side) e no servidor (server-side com Node.js).</p>
+                    <h4>História e Criação</h4>
+                    <p>Criado por Brendan Eich na Netscape em apenas 10 dias em 1995. Foi desenvolvido para ser uma linguagem de script leve para o navegador Netscape Navigator, permitindo interatividade nas páginas web que, até então, eram estáticas.</p>
+                    <p><strong>Características:</strong> Interpretada, tipagem dinâmica, orientada a objetos (prototipal), baseada em eventos, roda no navegador (client-side) e no servidor (server-side com Node.js). É a única linguagem que os navegadores web entendem nativamente.</p>
                     <p><strong>Aplicações Comuns:</strong> Interatividade em websites, desenvolvimento de front-end (React, Angular, Vue.js), desenvolvimento de back-end (Node.js), desenvolvimento mobile (React Native).</p>
-                    <p><strong>Exemplo de Código (Olá, Mundo no console do navegador):</strong></p>
-                    <pre><code class="language-javascript">console.log("Olá, Mundo!");
-</code></pre>
+                    <p><strong>Pontos Fortes e Fracos:</strong> É onipresente na web e possui um ecossistema gigantesco. Suas fraquezas incluem um comportamento peculiar com tipos (coerção) e inconsistências históricas entre navegadores.</p>
+                    <p><strong>Curiosidade:</strong> O nome foi uma jogada de marketing para aproveitar a popularidade do Java na época, mas as duas linguagens são fundamentalmente diferentes.</p>
                     <p><strong>Exemplo de Código (Manipulando o DOM):</strong></p>
-                    <pre><code class="language-javascript">document.addEventListener('DOMContentLoaded', function() {
+                    <pre><code class="language-javascript">// Espera o DOM carregar para executar o script
+document.addEventListener('DOMContentLoaded', function() {
+    // Cria um novo elemento h2
     let heading = document.createElement('h2');
     heading.textContent = 'Título Gerado por JavaScript';
+    // Adiciona o novo título ao corpo do documento
     document.body.appendChild(heading);
 });
 </code></pre>
@@ -227,26 +253,40 @@ p {
                     <img src="images/typescript_logo.png" alt="Logo TypeScript">
                     <h3>TypeScript</h3>
                     <p>TypeScript é um superset de JavaScript que adiciona tipagem estática opcional. Ele é transpilado para JavaScript e ajuda a escrever código mais robusto e fácil de manter, especialmente em projetos grandes.</p>
-                    <p><strong>Características:</strong> Superset de JavaScript, tipagem estática opcional, suporte a interfaces e classes, melhora a escalabilidade e a detecção de erros em tempo de desenvolvimento.</p>
+                    <h4>História e Criação</h4>
+                    <p>Desenvolvido e mantido pela Microsoft, foi lançado ao público em 2012. Foi criado pela equipe liderada por Anders Hejlsberg (o mesmo criador do C#) para solucionar as dificuldades de desenvolver aplicações JavaScript em larga escala, adicionando tipos estáticos para detectar erros mais cedo.</p>
+                    <p><strong>Características:</strong> Superset de JavaScript, tipagem estática opcional, suporte a interfaces e classes, melhora a escalabilidade e a detecção de erros em tempo de desenvolvimento. O código TypeScript não roda diretamente no navegador; ele é "transpilado" para JavaScript puro.</p>
                     <p><strong>Aplicações Comuns:</strong> Desenvolvimento de front-end (React, Angular, Vue.js), desenvolvimento de back-end (Node.js), aplicações web complexas.</p>
-                    <p><strong>Exemplo de Código (Olá, Mundo em TypeScript com tipagem):</strong></p>
-                    <pre><code class="language-typescript">function greet(name: string): string {
-    return `Olá, ${name}!`;
+                    <p><strong>Pontos Fortes e Fracos:</strong> Seu principal ponto forte é a segurança de tipo, que previne muitos bugs comuns em JavaScript. A desvantagem é a necessidade de uma etapa de compilação, o que pode tornar o processo de desenvolvimento um pouco mais lento.</p>
+                    <p><strong>Curiosidade:</strong> TypeScript não adiciona novos recursos ao JavaScript em tempo de execução. Ele é uma ferramenta de desenvolvimento que verifica o código e depois o converte para JavaScript compatível com os navegadores.</p>
+                    <p><strong>Exemplo de Código (Interface e Função em TypeScript):</strong></p>
+                    <pre><code class="language-typescript">// Define um contrato para um objeto do tipo 'Pessoa'
+interface Pessoa {
+    nome: string;
+    idade: number;
 }
 
-let user = "Usuário TypeScript";
-console.log(greet(user));
+function saudar(pessoa: Pessoa): string {
+    return `Olá, ${pessoa.nome}! Você tem ${pessoa.idade} anos.`;
+}
+
+let usuario = { nome: "Maria", idade: 30 };
+console.log(saudar(usuario));
 </code></pre>
                 </article>
-
+                
                 <article id="linguagem-brainfuck" class="language-block">
                     <img src="images/brainfuck_logo.png" alt="Logo Brainfuck">
                     <h3>Brainfuck</h3>
                     <p>Brainfuck é uma linguagem de programação esotérica minimalista, notável por seu pequeno número de comandos (apenas oito). É primariamente usada para desafiar programadores e explorar os limites da computação.</p>
-                    <p><strong>Características:</strong> Oito comandos simples (+, -, >, <, ., [, ]), opera em uma fita infinita de células de memória.</p>
-                    <p><strong>Aplicações Comuns:</strong> Principalmente para fins educacionais e de entretenimento na ciência da computação, não é usada para desenvolvimento prático.</p>
-                    <p><strong>Exemplo de Código (Olá, Mundo em Brainfuck - pode ser longo e difícil de entender):</strong></p>
-                    <pre><code class="language-brainfuck">++++++++++[&gt;+++++++&gt;++++++++++&gt;+++&gt;&lt;&lt;&lt;-]&gt;++.&gt;+.+++++++..+++.&gt;++.&lt;&lt;+++++++++++++++.&gt;.+++.------.--------.&gt;+.&gt;++.
+                    <h4>História e Criação</h4>
+                    <p>Criada em 1993 por Urban Müller. Seu objetivo era criar a menor linguagem de programação possível, com um compilador que ocupasse o mínimo de espaço (menos de 200 bytes). Foi projetada para ser Turing complete, mas extremamente difícil de usar na prática.</p>
+                    <p><strong>Características:</strong> Oito comandos simples (+, -, &gt;, &lt;, ., [, ]), opera em uma fita de memória (um array de bytes) com um ponteiro. É a definição de uma linguagem minimalista.</p>
+                    <p><strong>Aplicações Comuns:</strong> Principalmente para fins educacionais, recreativos e como um desafio na ciência da computação. Não é usada para desenvolvimento de software prático.</p>
+                    <p><strong>Pontos Fortes e Fracos:</strong> Sua força é seu minimalismo extremo. Sua fraqueza é ser completamente impraticável e ilegível para qualquer projeto real.</p>
+                    <p><strong>Curiosidade:</strong> O próprio nome da linguagem é um aviso sobre a sua dificuldade e a confusão mental que ela pode causar ao tentar programar com ela.</p>
+                    <p><strong>Exemplo de Código (Olá, Mundo em Brainfuck):</strong></p>
+                    <pre><code class="language-brainfuck">++++++++[>++++[>++>+++>+++>+<<<<-]>+>+>->>+[<]<-]>>.>---.+++++++..+++.>>.<-.<.+++.------.--------.>>+.>++.
 </code></pre>
                 </article>
 
@@ -254,13 +294,19 @@ console.log(greet(user));
                     <img src="images/sql_logo.png" alt="Logo SQL">
                     <h3>SQL (Structured Query Language)</h3>
                     <p>SQL é uma linguagem padrão para gerenciar e manipular bancos de dados relacionais. Ela permite consultar, inserir, atualizar e excluir dados.</p>
-                    <p><strong>Características:</strong> Linguagem de consulta declarativa, focada em operações com conjuntos de dados (tabelas).</p>
-                    <p><strong>Aplicações Comuns:</strong> Interação com sistemas de gerenciamento de bancos de dados (MySQL, PostgreSQL, SQL Server, etc.) em diversas aplicações.</p>
-                    <p><strong>Exemplo de Código (Selecionando todos os dados de uma tabela chamada 'clientes'):</strong></p>
-                    <pre><code class="language-sql">SELECT * FROM clientes;
-</code></pre>
-                    <p><strong>Exemplo de Código (Selecionando nomes de clientes com idade superior a 30):</strong></p>
-                    <pre><code class="language-sql">SELECT nome FROM clientes WHERE idade &gt; 30;
+                    <h4>História e Criação</h4>
+                    <p>Desenvolvida por Donald D. Chamberlin e Raymond F. Boyce na IBM no início dos anos 1970. Foi criada com base no modelo relacional de Edgar F. Codd para ser uma linguagem declarativa e acessível para consultar e gerenciar dados em bancos de dados relacionais.</p>
+                    <p><strong>Características:</strong> Linguagem de consulta declarativa, focada em operações com conjuntos de dados (tabelas). Isso significa que você descreve *o que* quer, e o banco de dados descobre *como* obter.</p>
+                    <p><strong>Aplicações Comuns:</strong> Interação com sistemas de gerenciamento de bancos de dados (MySQL, PostgreSQL, SQL Server, etc.) em praticamente qualquer aplicação que precise armazenar dados estruturados.</p>
+                    <p><strong>Pontos Fortes e Fracos:</strong> É uma linguagem poderosa, padronizada e otimizada para consultas de dados. Sua fraqueza é que existem diferentes "dialetos" (T-SQL, PL/SQL) que possuem sintaxes ligeiramente diferentes.</p>
+                    <p><strong>Curiosidade:</strong> Embora o nome oficial seja SQL, muitos profissionais ainda o pronunciam como "SEQUEL", uma referência ao nome original da linguagem, que não pôde ser mantido por questões de marca registrada.</p>
+                    <p><strong>Exemplo de Código (Selecionando e ordenando dados):</strong></p>
+                    <pre><code class="language-sql">-- Seleciona o nome e o email de todos os clientes do Brasil,
+-- ordenados por nome em ordem alfabética.
+SELECT nome, email
+FROM clientes
+WHERE pais = 'Brasil'
+ORDER BY nome ASC;
 </code></pre>
                 </article>
 
@@ -268,17 +314,22 @@ console.log(greet(user));
                     <img src="images/php_logo.png" alt="Logo PHP">
                     <h3>PHP (Hypertext Preprocessor)</h3>
                     <p>PHP é uma linguagem de script de código aberto muito utilizada para desenvolvimento web server-side. Ela pode ser incorporada diretamente no HTML.</p>
-                    <p><strong>Características:</strong> Interpretada, tipagem dinâmica, focada em desenvolvimento web, grande ecossistema de frameworks (Laravel, Symfony).</p>
-                    <p><strong>Aplicações Comuns:</strong> Desenvolvimento de sites dinâmicos, aplicações web, sistemas de gerenciamento de conteúdo (WordPress, Drupal), e-commerce.</p>
-                    <p><strong>Exemplo de Código (Olá, Mundo em PHP):</strong></p>
+                    <h4>História e Criação</h4>
+                    <p>Criada por Rasmus Lerdorf em 1994. Inicialmente, era um conjunto de scripts em C que ele usava para manter sua página pessoal (daí o nome original, "Personal Home Page Tools"). Com o tempo, evoluiu para uma linguagem de programação completa para a web.</p>
+                    <p><strong>Características:</strong> Interpretada, tipagem dinâmica, focada em desenvolvimento web. É conhecida por sua facilidade de implantação na maioria dos servidores web e por sua vasta comunidade. O PHP moderno (versões 7 e 8) melhorou muito em performance e recursos de linguagem.</p>
+                    <p><strong>Aplicações Comuns:</strong> Desenvolvimento de sites dinâmicos, aplicações web, sistemas de gerenciamento de conteúdo (WordPress, Drupal), e-commerce (Magento).</p>
+                    <p><strong>Pontos Fortes e Fracos:</strong> É fácil de aprender e implantar, com uma comunidade massiva. Suas fraquezas históricas incluem inconsistências na linguagem e uma reputação de código desorganizado, embora as versões modernas tenham melhorado drasticamente.</p>
+                    <p><strong>Curiosidade:</strong> Estima-se que mais de 75% de todos os sites na web cuja linguagem de servidor é conhecida rodam em PHP.</p>
+                    <p><strong>Exemplo de Código (Laço para exibir itens de uma lista):</strong></p>
                     <pre><code class="language-php">&lt;?php
-echo "Olá, Mundo!";
+$frutas = ["Maçã", "Banana", "Laranja"];
 ?&gt;
-</code></pre>
-                    <p><strong>Exemplo de Código (Exibindo informações do servidor):</strong></p>
-                    <pre><code class="language-php">&lt;?php
-phpinfo();
-?&gt;
+&lt;h1&gt;Lista de Frutas&lt;/h1&gt;
+&lt;ul&gt;
+    &lt;?php foreach ($frutas as $fruta): ?&gt;
+        &lt;li&gt;&lt;?= htmlspecialchars($fruta) ?&gt;&lt;/li&gt;
+    &lt;?php endforeach; ?&gt;
+&lt;/ul&gt;
 </code></pre>
                 </article>
 
@@ -286,21 +337,24 @@ phpinfo();
                     <img src="images/rust_logo.png" alt="Logo Rust">
                     <h3>Rust</h3>
                     <p>Rust é uma linguagem de programação de sistemas que se concentra em segurança, velocidade e concorrência. Ela alcança segurança de memória sem garbage collection através de um sistema de propriedade único.</p>
-                    <p><strong>Características:</strong> Compilada, forte ênfase em segurança de memória e concorrência, performance comparável a C++, sintaxe moderna.</p>
-                    <p><strong>Aplicações Comuns:</strong> Desenvolvimento de sistemas operacionais, engines de jogos, ferramentas de linha de comando, aplicações web de alta performance.</p>
-                    <p><strong>Exemplo de Código (Olá, Mundo em Rust):</strong></p>
-                    <pre><code class="language-rust">fn main() {
-    println!("Olá, Mundo!");
-}
-</code></pre>
-                    <p><strong>Exemplo de Código (Função simples com declaração de tipo):</strong></p>
-                    <pre><code class="language-rust">fn adicionar(x: i32, y: i32) -> i32 {
-    x + y
+                    <h4>História e Criação</h4>
+                    <p>Iniciada como um projeto pessoal por Graydon Hoare em 2006, a linguagem foi adotada e patrocinada pela Mozilla Research a partir de 2009. Rust foi projetada para resolver problemas comuns em C++, como erros de memória e dificuldades com programação concorrente, visando a criação de sistemas seguros e de alta performance.</p>
+                    <p><strong>Características:</strong> Compilada, forte ênfase em segurança de memória (sem garbage collector), concorrência sem data races, performance comparável a C++. Seu sistema de "ownership" (propriedade) e "borrowing" (empréstimo) é a chave para garantir segurança em tempo de compilação.</p>
+                    <p><strong>Aplicações Comuns:</strong> Desenvolvimento de sistemas operacionais, engines de jogos, ferramentas de linha de comando, aplicações web de alta performance, blockchain.</p>
+                    <p><strong>Pontos Fortes e Fracos:</strong> Sua principal força é a garantia de segurança com performance. Sua principal fraqueza é a curva de aprendizado íngreme, especialmente os conceitos de propriedade e tempo de vida (lifetimes).</p>
+                    <p><strong>Curiosidade:</strong> O nome da linguagem foi inspirado em um grupo de fungos (rust fungi), que são organismos robustos, distribuídos e que sobrevivem em diversos ambientes.</p>
+                    <p><strong>Exemplo de Código (Função que 'empresta' uma string):</strong></p>
+                    <pre><code class="language-rust">// A função 'calcula_tamanho' recebe uma referência (&) para uma String,
+// então ela não se torna dona do valor.
+fn calcula_tamanho(s: &String) -> usize {
+    s.len()
 }
 
 fn main() {
-    let resultado = adicionar(5, 3);
-    println!("O resultado é: {}", resultado);
+    let s1 = String::from("olá mundo");
+    let tamanho = calcula_tamanho(&s1);
+    // 's1' ainda é válida aqui, pois só foi emprestada.
+    println!("O tamanho de '{}' é {}.", s1, tamanho);
 }
 </code></pre>
                 </article>
@@ -309,15 +363,22 @@ fn main() {
                     <img src="images/r_logo.png" alt="Logo R">
                     <h3>R</h3>
                     <p>R é uma linguagem de programação e um ambiente de software para computação estatística e gráficos. É amplamente utilizada por estatísticos e cientistas de dados.</p>
-                    <p><strong>Características:</strong> Focada em análise estatística e visualização de dados, grande número de pacotes especializados (CRAN), interpretada.</p>
+                    <h4>História e Criação</h4>
+                    <p>Criada por Ross Ihaka e Robert Gentleman na Universidade de Auckland, Nova Zelândia, em 1993. R foi desenvolvida como uma implementação de código aberto da linguagem S (de estatística), com o objetivo de fornecer uma ferramenta poderosa e acessível para análise de dados e visualização gráfica.</p>
+                    <p><strong>Características:</strong> Focada em análise estatística e visualização de dados, grande número de pacotes especializados (disponíveis no CRAN - Comprehensive R Archive Network), interpretada. Suas operações são naturalmente vetorizadas, o que a torna eficiente para manipulação de datasets.</p>
                     <p><strong>Aplicações Comuns:</strong> Análise de dados, modelagem estatística, machine learning, visualização de dados, bioinformática.</p>
-                    <p><strong>Exemplo de Código (Olá, Mundo em R):</strong></p>
-                    <pre><code class="language-r">print("Olá, Mundo!")
-</code></pre>
-                    <p><strong>Exemplo de Código (Criação de um vetor e cálculo da média):</strong></p>
-                    <pre><code class="language-r">dados <- c(10, 20, 30, 40, 50)
-media_dados <- mean(dados)
-print(paste("A média dos dados é:", media_dados))
+                    <p><strong>Pontos Fortes e Fracos:</strong> É imbatível para exploração de dados e estatística. No entanto, pode ser mais lenta e consumir mais memória que outras linguagens para programação de propósito geral.</p>
+                    <p><strong>Curiosidade:</strong> O nome "R" tem uma dupla origem: é uma referência à sua predecessora, a linguagem "S", e também vem da primeira letra do nome de seus dois criadores, Ross e Robert.</p>
+                    <p><strong>Exemplo de Código (Criação de um gráfico simples):</strong></p>
+                    <pre><code class="language-r"># Cria um vetor de dados
+pressao_sanguinea <- c(120, 122, 130, 125, 140, 135, 132)
+
+# Cria um vetor de dias da semana
+dias <- c("Seg", "Ter", "Qua", "Qui", "Sex", "Sab", "Dom")
+
+# Plota os dados em um gráfico de linhas
+plot(pressao_sanguinea, type="o", col="red", xlab="Dia da Semana", ylab="Pressão Sanguínea", main="Variação da Pressão Durante a Semana", xaxt="n")
+axis(1, at=1:7, labels=dias)
 </code></pre>
                 </article>
             </div>
