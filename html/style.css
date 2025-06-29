@@ -25,7 +25,7 @@ body.dark-theme {
     --text-color: #ecf0f1; /* Cor do texto claro para o corpo */
     --light-bg: #121212; /* Fundo principal quase preto */
     --white: #1E1E1E; /* Fundo de seções 'brancas' no tema escuro (cinza bem escuro) */
-    --header-text-color: #b3bacc; /* Cor do texto do header no tema escuro */
+    --header-text-color: #ffffff; /* Cor do texto do header no tema escuro */
     --code-bg: #0d0d0d; /* Fundo dos blocos de código mais escuro, quase preto */
     --code-text: #f8f8f2; /* Texto dos blocos de código (mantido claro) */
     --border-color: #333333; /* Borda escura */
@@ -651,3 +651,4 @@ footer p {
         font-size: 1.3em;
     }
 }
+
